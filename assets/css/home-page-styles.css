@@ -118,6 +118,7 @@ body::before {
     position: absolute;
 }
 
+
 /* Hover Animation */
 .card__hovered .card__background {
     cursor: pointer;
