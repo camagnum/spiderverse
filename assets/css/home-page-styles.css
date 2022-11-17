@@ -41,14 +41,35 @@ body::before {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+    perspective: 3000px;
+}
+
+.cards-carousel {
+    display: flex;
+    justify-content: center;
+    width: calc(100vw / 3 - 10%);
+    transform-style: preserve-3d;
+    transition: transform 0.8s ease-in-out;
 }
 
 .card {
     border: 0.5rem solid #fff;
-    width: calc(100% / 3 - 8%);
+    width: 100%;
     height: 70vh;
-    position: relative;
+    position: absolute;
     transition: filter .5s ease-in-out;
+}
+
+.card:nth-child(1) {
+    transform: rotateY(0deg) translateZ(50vw);
+}
+
+.card:nth-child(2) {
+    transform: rotateY(120deg) translateZ(50vw);
+}
+
+.card:nth-child(3) {
+    transform: rotateY(240deg) translateZ(50vw);
 }
 
 .card__background {
@@ -79,11 +100,13 @@ body::before {
 }
 
 .controller {
-    position: relative;
+    position: absolute;
     display: flex;
     align-items: center;
     justify-content: center;
     margin-top: 1.7rem;
+    bottom: 1.5rem;
+    width: 100%;
 }
 
 .controller__button {
@@ -103,12 +126,19 @@ body::before {
     transition: transform 0.2s ease-in-out;
 }
 
+.controller__button:hover {
+    transform: scale(1.1);
+}
+
 .controller__button:nth-child(2) {
     margin: 0 3.75rem;
 }
 
-.controller__button:hover {
-    transform: scale(1.1);
+.controller__button--active {
+    background-color: #fff;
+    color: var(--primary-color);
+    border: 0.1875rem solid var(--primary-color);
+    outline: 0.125rem solid #fff;
 }
 
 .controller__line {
