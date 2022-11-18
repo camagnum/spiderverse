@@ -6,30 +6,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/assets/css/home-page-styles.css">
     <link rel="shortcut icon" href="/assets/img/icons/spider.svg" type="image/x-icon">
-    <script src="assets/js/script.js"></script>
+    <script src="assets/js/animations-script.js"></script>
     <title>Spider-Man | Multiverse</title>
 </head>
 <body>
     <nav class="menu">
         <ul>
-            <li class="menu__item">
-                <a href="/">Página Inicial</a>
-            </li>
 
             <li class="menu__item">
                 <a href="/pages/tobey-maguire/spiderman1.html">Tobey Maguire</a>
+            </li>
+            
+            <li class="menu__item">
+                <a href="/pages/andrew-garfield/spiderman1.html">Andrew Garfield</a>
             </li>
 
             <li class="menu__item menu__icon">
                 <img src="/assets/img/icons/spider.svg" alt="Spider-Man Multiverso">
             </li>
-
-            <li class="menu__item">
-                <a href="/pages/andrew-garfield/spiderman1.html">Andrew Garfield</a>
-            </li>
             
             <li class="menu__item">
                 <a href="/pages/tom-holland/spiderman1.html">Tom Holland</a>
+            </li>
+
+            <li class="menu__item">
+                <a href="/pages/miles-morales/spiderman1.html">Aranhaverso</a>
             </li>
         </ul>
     </nav>
@@ -54,6 +55,12 @@
                 <img src="/assets/img/spider-man-02.png" alt="Tom Holland" class="card__image">
                 <h2 class="card__title">Tom Holland</h2>
             </a>
+
+            <a href="/pages/miles-morales/spiderman1.html" class="card" id="spider-man-04">
+                <img src="/assets/img/pic-sm-bg-04.jpg" alt="" class="card__background">
+                <img src="/assets/img/spider-man-04.png" alt="Miles Morales" class="card__image">
+                <h2 class="card__title">Miles Morales</h2>
+            </a>
         </div>
     </div>
     
@@ -67,7 +74,15 @@
         <div id="3" class="controller__button">
             03
         </div>
-        <div class="controller__line"></div>
+        <div id="4" class="controller__button">
+            04
+        </div>
+        <div class="controller__line">
+            <i class="chevron left" onclick="addEventListenerToChevrons(this)"></i>
+            <i class="chevron right" onclick="addEventListenerToChevrons(this)"></i>
+        </div>
+
     </div>
+
 </body>
 </html>

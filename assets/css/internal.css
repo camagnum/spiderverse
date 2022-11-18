@@ -121,3 +121,8 @@
     background-image: url("/assets/img/spiderman-andrew/movie-02/background.png");
     background-size: cover;
 }
+
+.spiderman-01-miles {
+    background-image: url("/assets/img/spiderman-miles/background.jpg");
+    background-size: cover;
+}

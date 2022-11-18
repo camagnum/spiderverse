@@ -15,7 +15,7 @@ body::before {
     height: 100%;
     position: absolute;
     opacity: 0.2;
-    transition: background-image 1s ease-in-out, opacity 1s ease-in-out;
+    transition: background-image 0.8s ease-in-out, opacity 0.8s ease-in-out;
 }
 
 .menu {
@@ -47,7 +47,7 @@ body::before {
 .cards-carousel {
     display: flex;
     justify-content: center;
-    width: calc(100vw / 3 - 10%);
+    width: calc(100vw / 4 - 5%);
     transform-style: preserve-3d;
     transition: transform 0.8s ease-in-out;
 }
@@ -65,11 +65,15 @@ body::before {
 }
 
 .card:nth-child(2) {
-    transform: rotateY(120deg) translateZ(50vw);
+    transform: rotateY(90deg) translateZ(50vw);
 }
 
 .card:nth-child(3) {
-    transform: rotateY(240deg) translateZ(50vw);
+    transform: rotateY(180deg) translateZ(50vw);
+}
+
+.card:nth-child(4) {
+    transform: rotateY(270deg) translateZ(50vw);
 }
 
 .card__background {
@@ -130,8 +134,16 @@ body::before {
     transform: scale(1.1);
 }
 
-.controller__button:nth-child(2) {
-    margin: 0 3.75rem;
+.controller__button {
+    margin: 0 3rem;
+}
+
+.controller__button:nth-child(1) {
+    margin-left: 0;
+}
+
+.controller__button:nth-child(4) {
+    margin-right: 0;
 }
 
 .controller__button--active {
@@ -146,6 +158,13 @@ body::before {
     width: 50%;
     height: 2px;
     position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.controller__line i {
+    font-size: 2rem;
 }
 
 
@@ -171,6 +190,10 @@ body#spider-man-03-hovered::before {
     background-image: url('/assets/img/pic-sm-bg-03.jpg');
 }
 
+body#spider-man-04-hovered::before {
+    background-image: url('/assets/img/pic-sm-bg-04.jpg');
+}
+
 body[id^="spider-man-"]::before {
     opacity: 1;
 }
@@ -181,4 +204,54 @@ body[id^="spider-man-"] .card:not(.card__hovered) {
 
 .card__hovered .card__title {
     bottom: 50%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.chevron {
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+.chevron:hover {
+    transform: scale(1.1);
+}
+
+.chevron::before {
+	border-style: solid;
+	border-width: 0.25em 0.25em 0 0;
+	content: '';
+	display: inline-block;
+	width: 0.72em;
+	height: 0.72em;
+	left: 0.15em;
+	position: relative;
+	top: 0.15em;
+	transform: rotate(-45deg);
+	/* vertical-align: center; */
+}
+
+.chevron.right:before {
+	left: 0;
+	transform: rotate(45deg);
+}
+
+.chevron.left:before {
+	left: 0em;
+	transform: rotate(-135deg);
 }
